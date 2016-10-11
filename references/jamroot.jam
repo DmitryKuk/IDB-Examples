@@ -1,0 +1,5 @@
+# Dmitry Kukovinets <d1021976@gmail.com>, 11.10.2016, 19:24
+
+import testing ;
+
+unit-test main : main.cpp ;
