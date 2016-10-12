@@ -13,10 +13,22 @@ void print(std::string & /* str */)
 }
 
 
+// void print(const std::string & /* str */)
+// {
+// 	std::cout << "Got const lvalue." << std::endl;
+// }
+
+
 void print(std::string && /* str */)
 {
 	std::cout << "Got rvalue." << std::endl;
 }
+
+
+// void print(const std::string && /* str */)
+// {
+// 	std::cout << "Got const rvalue." << std::endl;
+// }
 
 
 
@@ -75,7 +87,9 @@ int main()
 	
 	// {
 	// 	const std::string const_str = "hello!";
-	// 	PRINT(stupid_move(const_str));	// Error: value is const!
+		
+	// 	// Error, if print() has not 'const std::strint &' or 'const std::string &&' overloads!
+	// 	PRINT(stupid_move(const_str));
 	// }
 	
 	
