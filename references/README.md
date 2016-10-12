@@ -12,6 +12,7 @@
 - [What are rvalues, lvalues, xvalues, glvalues, and prvalues? (stackoverflow.com)](http://stackoverflow.com/questions/3601602/what-are-rvalues-lvalues-xvalues-glvalues-and-prvalues)
 - [std::move (cppreference.com)](http://en.cppreference.com/w/cpp/utility/move)
 - [std::forward (cppreference.com)](http://en.cppreference.com/w/cpp/utility/forward)
+- [What is use of the ref-qualifier `const &&`? (stackoverflow.com)](http://stackoverflow.com/questions/24824432/what-is-use-of-the-ref-qualifier-const)
 
 ---
 Дмитрий Куковинец <d1021976@gmail.com>, 11.10.2016, 19:54
