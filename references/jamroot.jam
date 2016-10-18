@@ -2,4 +2,6 @@
 
 import testing ;
 
-unit-test main : main.cpp ;
+#unit-test main : main.cpp ;
+
+unit-test test : test.cpp ;

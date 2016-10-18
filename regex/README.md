@@ -9,7 +9,7 @@
 
 ### Что почитать?
 - [ECMAScript syntax](http://www.cplusplus.com/reference/regex/ECMAScript/)
-- [Header <regex>](http://www.cplusplus.com/reference/regex/)
+- [Header: regex](http://www.cplusplus.com/reference/regex/)
 - [std::match_results, std::cmatch, std::smatch...](http://www.cplusplus.com/reference/regex/match_results/)
 - [std::regex_match(...)](http://www.cplusplus.com/reference/regex/regex_match/)
 - [std:regex_search(...)](http://www.cplusplus.com/reference/regex/regex_search/)
