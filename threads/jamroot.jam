@@ -1,0 +1,9 @@
+# Author: Dmitry Kukovinets (d1021976@gmail.com), 18.06.2016, 22:08
+
+import testing ;
+
+exe thread : thread.cpp ;
+
+exe mutex : mutex.cpp ;
+
+exe async : async.cpp ;
