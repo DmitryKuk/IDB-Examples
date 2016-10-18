@@ -1,7 +1,11 @@
 # Dmitry Kukovinets <d1021976@gmail.com>, 11.10.2016, 19:24
 
+# NOTE: use '#' to comment line and disable tests!
+
 import testing ;
 
-#unit-test main : main.cpp ;
+unit-test move_forward : move_forward.cpp ;
 
-unit-test test : test.cpp ;
+unit-test own_class : own_class.cpp ;
+
+unit-test reference_wrapper : reference_wrapper.cpp ;

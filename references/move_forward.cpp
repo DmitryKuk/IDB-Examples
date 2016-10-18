@@ -56,6 +56,9 @@ void with_forward(T &&str)		// Correct forwarding!
 
 int main()
 {
+	std::cout << std::endl << "Output from file: " << __FILE__ << std::endl;
+	
+	
 	std::string str = "hello";
 	
 	
@@ -98,5 +101,7 @@ int main()
 	PRINT(with_forward(std::move(str)));
 	
 	
-	return 1;	// 1 => test failed
+	std::cout << std::endl << "End of output from file: " << __FILE__ << std::endl;
+	
+	return 1;	// 1 => test failed (for b2)
 }
