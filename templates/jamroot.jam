@@ -1,0 +1,14 @@
+# Dmitry Kukovinets <d1021976@gmail.com>, 11.10.2016, 13:52
+
+import testing ;
+
+unit-test template_class : template_class.cpp ;
+
+unit-test template_function : template_function.cpp ;
+
+unit-test template_function_in_class : template_function_in_class.cpp ;
+
+
+unit-test template_templates : template_templates.cpp ;
+
+unit-test variadic_templates : variadic_templates.cpp ;
