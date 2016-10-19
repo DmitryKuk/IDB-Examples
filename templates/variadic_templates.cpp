@@ -4,6 +4,14 @@
 #include <tuple>
 
 
+template<class... Ts>
+void print_size(Ts &&... args)	// Переменное количество аргументов (которые являются универсальными ссылками)
+{
+	std::cout << "Got " << sizeof...(Ts) << " template parameter(s), ";
+	std::cout << "Got " << sizeof...(args) << " arg(s)." << std::endl;
+}
+
+
 // Общая версия
 template<class... Ts>
 void print(Ts &&... args)	// Переменное количество аргументов (которые являются универсальными ссылками)
@@ -73,6 +81,10 @@ int
 main()
 {
 	std::cout << std::endl << "Output from file: " << __FILE__ << std::endl << std::endl;
+	
+	
+	print_size(1, 2, 3, "hello", 10.5);
+	std::cout << std::endl;
 	
 	
 	print(1, 2, 3, "hello", 10.5);
