@@ -1,0 +1,5 @@
+# Dmitry Kukovinets <d1021976@gmail.com>, 19.10.2016, 13:01
+
+import testing ;
+
+unit-test 9 : 9.cpp ;
