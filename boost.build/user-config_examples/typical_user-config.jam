@@ -1,0 +1,21 @@
+using имя_компилятора
+	: # Версия компилятора (можно не указывать)
+	: # Команда для вызова компилятора (можно не указывать, если работает)
+	:
+		# Включаем C11 и C++14
+		<cflags>-std=c11 <cxxflags>-std=c++14
+		
+		# Ускоряем компиляцию
+		<compileflags>-pipe <linkflags>-pipe
+		
+		# Подключаем Boost
+		<compileflags>-I/путь/до/boost/include
+		<linkflags>-L/путь/до/boost/lib
+		
+		# Для цветного вывода сообщений об ошибках
+		<compileflags>-fcolor-diagnostics <linkflags>-fcolor-diagnostics
+	;
+
+
+# Настраиваем Qt5
+using qt5 : /путь/до/qt5 ;

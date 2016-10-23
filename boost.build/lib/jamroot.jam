@@ -1,0 +1,61 @@
+# Author: Dmitry Kukovinets (d1021976@gmail.com), 23.10.2016, 21:52
+
+
+# Libraries
+# Usage example (and see below):
+#	exe test : test.cpp /lib//boost_asio ;
+
+project lib ;
+
+
+# Boost (all header-only libs)
+alias boost ;
+explicit boost ;
+
+
+# Boost.System
+lib boost_system
+	: : <name>boost_system
+	: : <library>boost
+	;
+explicit boost_system ;
+
+
+# Boost.Filesystem
+lib boost_filesystem
+	: : <name>boost_filesystem
+	: : <library>boost <library>boost_system
+	;
+explicit boost_filesystem ;
+
+
+# Boost.Thread
+lib boost_thread
+	: : <name>boost_thread
+	: : <library>boost <library>boost_system
+	;
+explicit boost_thread ;
+
+
+# Boost.Random
+lib boost_random
+	: : <name>boost_random
+	: : <library>boost <library>boost_system
+	;
+explicit boost_random ;
+
+
+# Boost.Program options
+lib boost_program_options
+	: : <name>boost_program_options
+	: : <library>boost <library>boost_system
+	;
+explicit boost_program_options ;
+
+
+# Boost.Asio
+alias boost_asio
+	: :
+	: : <library>boost <library>boost_system
+	;
+explicit boost_asio ;

@@ -1,0 +1,42 @@
+using clang-darwin
+	:
+	:
+	:
+		<cflags>-std=c11 <cxxflags>-std=c++14
+#		<cxxflags>-ftemplate-backtrace-limit=0
+		
+		<compileflags>-pipe <linkflags>-pipe
+		
+		# Boost and others
+		<compileflags>-isystem/usr/local/include
+		<linkflags>-L/usr/local/lib
+		
+		# Macports
+		<compileflags>-isystem/opt/local/include
+		<linkflags>-L/opt/local/lib
+		
+		<compileflags>-fcolor-diagnostics <linkflags>-fcolor-diagnostics
+	;
+
+
+using darwin
+	: 5
+	: g++-mp-5
+	:
+		<cflags>-std=c11 <cxxflags>-std=c++14
+		
+		<compileflags>-pipe <linkflags>-pipe
+		
+		# Boost and others
+		<compileflags>-isystem/usr/local/include
+		<linkflags>-L/usr/local/lib
+		
+		# Macports
+		<compileflags>-isystem/opt/local/include
+		<linkflags>-L/opt/local/lib
+		
+		<compileflags>-fdiagnostics-color <linkflags>-fdiagnostics-color
+	;
+
+
+using qt5 : /opt/local/libexec/qt5 ;

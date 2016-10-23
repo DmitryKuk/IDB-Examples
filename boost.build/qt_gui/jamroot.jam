@@ -1,0 +1,41 @@
+# Author: Dmitry Kukovinets (d1021976@gmail.com), 23.10.2016, 21:52
+
+
+# Настройки текущего проекта
+project qt_gui
+	: default-build release
+	: build-dir build
+	: requirements <threading>multi <include>../net/src
+	;
+
+
+
+# Подключаем Qt5
+import qt5 ;
+
+if ! [ qt5.initialized ]
+{
+	ECHO "Warning: Qt5 not initialized in user-config.jam" ;
+}
+
+
+# Подлючаем соседний проект net
+use-project net : ../net ;
+
+
+# Основной exe
+exe browser
+	:
+		# Исходники текущего проекта (кроме tool_* и test_*)
+		[ glob-tree *.cpp *.hpp *.ui : test_* tool_* ]
+		
+		# Подключаем библиотеку проекта net
+		/net
+		
+		# Подключаем нужные часть Qt5
+		/qt5//QtCore /qt5//QtGui /qt5//QtWidgets
+	: <link>static
+	: <variant>release
+	;
+
+install install_browser : browser : <location>build/bin ;

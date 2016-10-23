@@ -1,0 +1,37 @@
+# Author: Dmitry Kukovinets (d1021976@gmail.com), 23.10.2016, 21:52
+
+
+# Настройки текущего проекта
+project net
+	: default-build release
+	: build-dir build
+	: requirements <threading>multi
+	;
+
+
+# Подключаем вспомогательный проект для подклюения boost
+use-project lib : ../lib ;
+
+
+# Основная библиотека
+lib net
+	:
+		# Исходники текущего проекта (кроме tool_* и test_*)
+		[ glob-tree *.cpp *.hpp *.ui : test_* tool_* ]
+		
+		# Подключаем нужные части буста (см. ../lib/jamroot.jam!)
+		/lib//boost_asio
+	: <link>static
+	: <variant>release
+	;
+
+
+# Приложение для отладки
+exe tool_net : src/tool_net.cpp net ;
+install install_tool_net : tool_net : <location>build/bin ;
+
+
+# Unit-тесты
+import testing ;
+
+unit-test test_get : src/test_get.cpp net ;

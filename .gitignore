@@ -3,6 +3,7 @@
 
 # Build results
 bin
+build
 
 # Hidden files and directories
 .*
