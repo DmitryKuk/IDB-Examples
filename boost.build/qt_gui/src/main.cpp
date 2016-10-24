@@ -9,7 +9,9 @@
 int
 main()
 {
-	std::cout << "It works!" << std::endl;
+	net::loaded l;
+	
+	std::cout << "It works! Status: " << l.status() << std::endl;
 	
 	return 0;
 }
