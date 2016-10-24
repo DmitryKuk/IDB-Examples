@@ -13,7 +13,9 @@ using имя_компилятора
 		<linkflags>-L/путь/до/boost/lib
 		
 		# Для цветного вывода сообщений об ошибках
-		<compileflags>-fcolor-diagnostics <linkflags>-fcolor-diagnostics
+		# Первая строчка -- Clang, 2-я -- GCC. Можете расскомментировать нужную.
+#		<compileflags>-fcolor-diagnostics <linkflags>-fcolor-diagnostics
+#		<compileflags>-fdiagnostics-color <linkflags>-fdiagnostics-color
 	;
 
 
