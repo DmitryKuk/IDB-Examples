@@ -1,0 +1,5 @@
+# Dmitry Kukovinets <d1021976@gmail.com>, 10.11.2016, 21:06
+
+
+exe any : main.cpp ;
+install install-any : any : <location>bin/ ;
