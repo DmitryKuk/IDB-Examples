@@ -44,9 +44,11 @@
 	+ используем *правильный* `connect` (1)
 	+ что за layout-ы, и чем widget отличается от view?
 	+ что там с контейнерами? (1)
-	+ `QString` vs `std::string` (1)
+	+ `QString` vs `std::string` (**Иванов**)
 
 ### 02.12.2016. Доп. встреча
+- Высокоуровневый ввод/вывод в C++
+	+ IOStreams, `std::fstream`, `std::stringstream` (1)
 - Дополнительно о многопоточности
 	+ атомарные операции, `std::atomic` (1)
 	+ `spinlock` (1)
