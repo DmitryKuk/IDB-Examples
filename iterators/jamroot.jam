@@ -1,0 +1,9 @@
+# Dmitry Kukovinets <d1021976@gmail.com>, 11.10.2016, 19:24
+
+# NOTE: use '#' to comment line and disable tests!
+
+exe 1 : 1.cpp ;
+install install-1 : 1 : <location>build/bin ;
+
+exe 2 : 2.cpp ;
+install install-2 : 2 : <location>build/bin ;

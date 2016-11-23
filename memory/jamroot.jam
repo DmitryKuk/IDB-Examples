@@ -1,0 +1,13 @@
+# Dmitry Kukovinets <d1021976@gmail.com>, 22.11.2016, 22:31
+
+
+exe new_delete : new_delete.cpp ;
+install install-new_delete : new_delete : <location>./bin/ ;
+
+
+exe gc : gc.cpp ;
+install install-gc : gc : <location>./bin/ ;
+
+
+exe addressof : addressof.cpp ;
+install install-addressof : addressof : <location>./bin/ ;

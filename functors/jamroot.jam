@@ -1,0 +1,17 @@
+# Dmitry Kukovinets <d1021976@gmail.com>, 08.11.2016, 22:44
+
+
+exe boost_lambda : boost_lambda.cpp ;
+install install-boost_lambda : boost_lambda : <location>./bin/ ;
+
+
+exe functors : functors.cpp ;
+install install-functors : functors : <location>./bin/ ;
+
+
+exe functors2 : functors2.cpp ;
+install install-functors2 : functors2 : <location>./bin/ ;
+
+
+exe fun_ptrs : fun_ptrs.cpp ;
+install install-fun_ptrs : fun_ptrs : <location>./bin/ ;
