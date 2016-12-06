@@ -1,0 +1,5 @@
+# Dmitry Kukovinets <d1021976@gmail.com>, 06.12.2016, 16:27
+
+
+exe server : server.cpp ;
+install install-server : server : <location>bin ;
