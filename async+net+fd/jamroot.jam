@@ -21,3 +21,6 @@ install install-server : server : <location>bin ;
 
 exe stream_client : stream_client.cpp /boost//system ;
 install install-stream_client : stream_client : <location>bin ;
+
+exe sync_client : sync_client.cpp /boost//system ;
+install install-sync_client : sync_client : <location>bin ;
