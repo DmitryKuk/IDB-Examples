@@ -18,6 +18,9 @@ use-project boost : $(BOOST_ROOT) ;
 exe server : server.cpp ;
 install install-server : server : <location>bin ;
 
+exe asio_async_server : asio_async_server.cpp /boost//system ;
+install install-asio_async_server : asio_async_server : <location>bin ;
+
 
 exe stream_client : stream_client.cpp /boost//system ;
 install install-stream_client : stream_client : <location>bin ;

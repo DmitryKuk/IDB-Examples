@@ -5,14 +5,15 @@
 #include <boost/asio.hpp>
 
 
+
 int
 main(int argc, char **argv)
 {
 	using namespace boost::asio;
 	
 	
-	ip::tcp::endpoint endpoint{ip::address_v4::from_string("127.0.0.1"), 8080};
-	ip::tcp::iostream stream{endpoint};
+	ip::tcp::endpoint remote_endpoint{ip::address_v4::from_string("127.0.0.1"), 8080};
+	ip::tcp::iostream stream{remote_endpoint};
 	
 	if (!stream) {
 		std::cerr << stream.error().message() << std::endl;

@@ -6,6 +6,7 @@
 #include <boost/asio.hpp>
 
 
+
 int
 main(int argc, char **argv)
 {
@@ -14,9 +15,9 @@ main(int argc, char **argv)
 	
 	io_service service;
 	
-	ip::tcp::endpoint endpoint{ip::address_v4::from_string("127.0.0.1"), 8080};
+	ip::tcp::endpoint remote_endpoint{ip::address_v4::from_string("127.0.0.1"), 8080};
 	ip::tcp::socket socket{service};
-	socket.connect(endpoint);
+	socket.connect(remote_endpoint);
 	
 	
 	for (int i = 1; i < argc; ++i) {

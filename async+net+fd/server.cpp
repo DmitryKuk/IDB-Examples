@@ -146,7 +146,7 @@ main()
 					std::clog << "Error with client: " << std::strerror(errno) << '.' << std::endl;
 					close(*client_it);
 					clients_to_erase.push_back(client_it);
-				} else if (FD_ISSET(*client_it, &read_set)) {	// Something recieved...
+				} else if (FD_ISSET(*client_it, &read_set)) {	// Something received...
 					char message_buf[10];
 					
 					while (true) {
