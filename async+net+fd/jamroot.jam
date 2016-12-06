@@ -1,5 +1,23 @@
 # Dmitry Kukovinets <d1021976@gmail.com>, 06.12.2016, 16:27
 
+import os ;
+BOOST_ROOT = [ os.environ BOOST_ROOT ] ;
+if ! $(BOOST_ROOT)
+{
+	import errors ;
+	errors.user-error
+		: "Environment variable BOOST_ROOT not set."
+		: "Please, set it with path to boost sources as value."
+		: "Example (add to ~/.bashrc): export BOOST_ROOT='/path/to/boost_1_62'"
+		;
+}
+
+use-project boost : $(BOOST_ROOT) ;
+
 
 exe server : server.cpp ;
 install install-server : server : <location>bin ;
+
+
+exe stream_client : stream_client.cpp /boost//system ;
+install install-stream_client : stream_client : <location>bin ;
